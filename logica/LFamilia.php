@@ -30,5 +30,14 @@
             $ps->bindParam(':des', $familia->getDescripcion());
             $ps->execute();
         }
+
+        public function borrar(Familia $familia){
+            $db=new DB();
+            $cn=$db->conectar();
+            $sql="delete from familia where idfamilia=:idfam";
+            $ps=$cn->prepare($sql);
+            $ps->bindParam(':idfam', $familia->getIdFamilia());
+            $ps->execute();
+        }
     }
 ?>

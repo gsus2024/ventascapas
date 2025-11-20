@@ -37,7 +37,7 @@
                     <td><?=$fam->getDescripcion()?></td>
 
                     <td><a href="modificarfamilia.php">Modificar</a></td>
-                    <td><a href="borrarfamilia.php?idfam=<?=$f[0]?>">Borrar</a></td>
+                    <td><a href="borrarfamilia.php?idfam=<?=$fam->getIdFamilia()?>">Borrar</a></td>
                 </tr>
                 <?php
                     }       
